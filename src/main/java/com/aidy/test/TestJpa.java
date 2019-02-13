@@ -19,24 +19,24 @@ package com.aidy.test;
  * @since 1.0.0
  */
 
-import com.aidy.SpringbootJpaApplication;
-import com.aidy.UsersRepository.TestCRUDRepository;
-import com.aidy.UsersRepository.TestPagingAndSortingRepository;
-import com.aidy.UsersRepository.UsersJPARepository;
-import com.aidy.UsersRepository.UsersRepository;
-import com.aidy.pojo.Users;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+        import com.aidy.SpringbootJpaApplication;
+        import com.aidy.UsersRepository.TestCRUDRepository;
+        import com.aidy.UsersRepository.TestPagingAndSortingRepository;
+        import com.aidy.UsersRepository.UsersJPARepository;
+        import com.aidy.UsersRepository.UsersRepository;
+        import com.aidy.pojo.Users;
+        import org.junit.Test;
+        import org.junit.runner.RunWith;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.boot.test.context.SpringBootTest;
+        import org.springframework.data.domain.Page;
+        import org.springframework.data.domain.PageRequest;
+        import org.springframework.data.domain.Sort;
+        import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+        import java.util.ArrayList;
+        import java.util.List;
+        import java.util.Optional;
 
 
 /**
@@ -122,7 +122,7 @@ public class TestJpa {
         user.setAddress("天津");
         user.setAge(32);
         user.setName("张三丰");
-       testCRUDRepository.save(user);
+        testCRUDRepository.save(user);
     }
 
     @Test
@@ -132,7 +132,7 @@ public class TestJpa {
         user.setAddress("天津12");
         user.setAge(32);
         user.setName("张三丰13");
-       testCRUDRepository.save(user);
+        testCRUDRepository.save(user);
     }
 
     @Test
@@ -145,20 +145,20 @@ public class TestJpa {
     @Test
     public void testcrudRepositoryFindById() {
         Optional<Users> user = testCRUDRepository.findById(4);
-       if(user.isPresent()){
-           System.out.println(user.get());
-       }
+        if(user.isPresent()){
+            System.out.println(user.get());
+        }
     }
 
     @Test
     public void testcrudRepositoryDelete() {
-       testCRUDRepository.deleteById(4);
+        testCRUDRepository.deleteById(4);
     }
 
     @Test//删除所有对象,参数为对象集合
     public void testcrudRepositoryDeleteAll() {
         List<Users> all = (List<Users>) testCRUDRepository.findAll();
-       testCRUDRepository.deleteAll(all);
+        testCRUDRepository.deleteAll(all);
     }
 
     /**
@@ -198,7 +198,7 @@ public class TestJpa {
 
     /**
      * 测试jparepository
-     * 排序
+     * 排序啊啊啊
      */
     @Test
     public void testSortingByJpa() {
